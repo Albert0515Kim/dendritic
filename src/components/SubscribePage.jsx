@@ -1,12 +1,13 @@
 import React from 'react';
-import { useRouter } from 'next/Navigation';
+import { useRouter } from 'next/navigation';
 import { useAuth } from '../context/AuthContext';
 import { getCheckoutUrl } from '../context/StripePayment';
+import app from '../firebase'; // Ensure you have your Firebase app initialized
 
 
 const SubscribePage = () => {
   const monthlyPriceId = process.env.NEXT_PUBLIC_STRIPE_MONTHLY_PRICE_ID;
-  const { user } = useAuth();
+  useAuth();
   const router = useRouter();
 
   const handleCheckout = async (priceId) => {
