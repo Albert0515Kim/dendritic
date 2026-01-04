@@ -4,6 +4,11 @@ import './globals.css';
 export const metadata = {
   title: 'Dendritic Learning',
   description: 'Learn in graphs. Think in connections.',
+  icons: {
+    icon: '/DendriticLearning_icon_transparent.svg',
+    shortcut: '/DendriticLearning_icon_transparent.svg',
+    apple: '/DendriticLearning_icon_transparent.svg',
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
