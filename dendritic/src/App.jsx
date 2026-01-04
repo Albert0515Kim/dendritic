@@ -171,7 +171,7 @@ export default function App() {
                 Learn in graphs. Think in connections.
               </h1>
               <p className="mt-4 max-w-2xl text-lg text-white/70">
-                Dendritic Learning helps you capture concepts as webs, not lists-so you can see the neural pathways between ideas and remember faster.
+                Dendritic Learning helps you capture concepts as webs, not lists. See the neural pathways between ideas and remember faster.
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -219,48 +219,7 @@ export default function App() {
           </div>
         </section>
 
-        <section id="demo" className="mt-20 grid gap-10 rounded-3xl border border-white/10 bg-white/[0.02] p-8 shadow-[0_30px_120px_-80px_rgba(16,185,129,1)] lg:grid-cols-[1.1fr_0.9fr]">
-          <div>
-            <span className="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-200/80">Watch demo</span>
-            <h2 className="mt-3 text-3xl font-semibold sm:text-4xl">See Dendritic in action</h2>
-            <p className="mt-4 text-base text-white/70 lg:text-lg">
-              A quick walkthrough of creating a set, linking concepts into a dendritic map, and using the writing flow to reinforce memory.
-            </p>
-            <ul className="mt-6 space-y-3 text-white/70">
-              <li className="flex items-start gap-3">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-300" aria-hidden="true" />
-                Visualize how nodes connect across courses.
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-300" aria-hidden="true" />
-                Draft notes inline and pin them to each node.
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="mt-1 inline-block h-1.5 w-1.5 rounded-full bg-emerald-300" aria-hidden="true" />
-                Study in a calm interface tuned for focus.
-              </li>
-            </ul>
-          </div>
-          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-black/60 shadow-[0_25px_80px_-60px_rgba(16,185,129,1)]">
-            <div className="relative h-0 w-full pb-[56.25%]">
-              <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-white/5 via-black to-emerald-500/5">
-                <div className="flex h-16 w-16 items-center justify-center rounded-full border border-white/20 bg-black/50 text-white">
-                  <svg
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                    className="h-6 w-6 text-emerald-200"
-                  >
-                    <path
-                      d="M8.5 6.9c-.3-.2-.5-.3-.7-.1-.2.1-.3.3-.3.6v10.2c0 .3.1.5.3.6.2.2.4.1.7-.1l8.7-5.1c.3-.2.4-.4.4-.6 0-.2-.1-.4-.4-.6L8.5 6.9Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                  <span className="sr-only">Demo video placeholder</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+       
 
         <section className="mt-20 rounded-3xl border border-white/10 bg-gradient-to-br from-white/[0.03] via-black to-emerald-500/10 px-8 py-12 text-center shadow-[0_40px_120px_-80px_rgba(16,185,129,1)]">
           <h2 className="text-3xl font-semibold sm:text-4xl">Ready to build your own dendrites?</h2>
