@@ -185,7 +185,7 @@ export default function App() {
             </div>
           </div>
           <div className="relative">
-            <PlaceholderFrame label="iPad + iPhone experience" />
+            <PlaceholderFrame label="iPad" />
           </div>
         </section>
 
@@ -193,7 +193,7 @@ export default function App() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-center gap-2 text-white">
               <span className="h-2 w-2 rounded-full bg-emerald-300" aria-hidden="true" />
-              Available now on iPhone & iPad
+              Available now on iPad
             </div>
             <div className="flex items-center gap-3 text-white/70">
             </div>
