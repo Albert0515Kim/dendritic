@@ -22,10 +22,11 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "npm run bulid",
+    "build": "next build",
     "start": "next start",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d out"
   },
   "eslintConfig": {
