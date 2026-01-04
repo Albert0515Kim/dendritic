@@ -198,7 +198,6 @@ export default function App() {
               Available now on iPhone & iPad
             </div>
             <div className="flex items-center gap-3 text-white/70">
-              <span className="h-px w-8 bg-white/15" aria-hidden="true" />
             </div>
           </div>
         </section>
