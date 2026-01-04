@@ -1,6 +1,7 @@
 const nextConfig = {
-  // enable React Compiler
-  reactCompiler: true,
+  experimental: {
+    reactCompiler: true,
+  },
 };
 
 export default nextConfig;
