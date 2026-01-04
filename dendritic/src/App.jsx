@@ -161,7 +161,7 @@ export default function App() {
         <section className="grid grid-cols-1 items-center gap-12 pb-8 lg:grid-cols-[1.1fr_0.9fr]">
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-300/30 bg-emerald-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-100">
-              Available now on iPhone & iPad
+              Available now on iPad
               <span className="h-2 w-2 rounded-full bg-emerald-300" />
             </div>
             <div>
