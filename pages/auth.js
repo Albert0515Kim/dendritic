@@ -1,5 +1,7 @@
-import AuthPage from '../src/components/AuthPage';
+export async function getServerSideProps() {
+  return { notFound: true };
+}
 
 export default function Auth() {
-  return <AuthPage />;
+  return null;
 }

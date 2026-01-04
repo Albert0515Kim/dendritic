@@ -1,11 +1,7 @@
-import Navbar from '../src/components/Navbar';
-import SubscribePage from '../src/components/SubscribePage';
+export async function getServerSideProps() {
+  return { notFound: true };
+}
 
 export default function Subscribe() {
-  return (
-    <>
-      <Navbar />
-      <SubscribePage />
-    </>
-  );
+  return null;
 }
