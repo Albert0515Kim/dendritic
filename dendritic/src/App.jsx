@@ -31,14 +31,12 @@ const AppStoreBadge = ({ className = '' }) => (
     className={`group inline-flex items-center gap-3 rounded-xl border border-emerald-300/40 bg-emerald-500/10 px-5 py-3 text-sm font-semibold text-emerald-100 shadow-[0_12px_35px_-22px_rgba(16,185,129,0.9)] transition hover:-translate-y-0.5 hover:border-emerald-300/80 hover:bg-emerald-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-black ${className}`}
     aria-label="Download Dendritic Learning on the App Store"
   >
-    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-emerald-400/20 text-white">
-      <svg viewBox="0 0 24 24" aria-hidden="true" className="h-5 w-5">
-        <path
-          fill="currentColor"
-          d="M19.665 13.109c-.03-2.396 1.962-3.547 2.052-3.604-1.118-1.634-2.853-1.858-3.468-1.883-1.471-.155-2.88.872-3.624.872-.758 0-1.907-.851-3.132-.827-1.608.023-3.093.934-3.92 2.366-1.665 2.883-.423 7.126 1.169 9.465.774 1.115 1.689 2.373 2.89 2.328 1.17-.045 1.607-.753 3.021-.753 1.399 0 1.81.753 3.042.73 1.259-.022 2.053-1.136 2.822-2.257.896-1.316 1.262-2.59 1.277-2.655-.028-.011-2.447-.94-2.489-3.782ZM16.98 5.86c.653-.794 1.094-1.889.972-2.98-.942.038-2.086.628-2.762 1.412-.606.701-1.14 1.822-.998 2.89 1.054.081 2.134-.531 2.788-1.322Z"
-        />
-      </svg>
-    </span>
+    <svg viewBox="0 0 24 24" aria-hidden="true" className="h-7 w-7 shrink-0 text-white">
+      <path
+        fill="currentColor"
+        d="M19.665 13.109c-.03-2.396 1.962-3.547 2.052-3.604-1.118-1.634-2.853-1.858-3.468-1.883-1.471-.155-2.88.872-3.624.872-.758 0-1.907-.851-3.132-.827-1.608.023-3.093.934-3.92 2.366-1.665 2.883-.423 7.126 1.169 9.465.774 1.115 1.689 2.373 2.89 2.328 1.17-.045 1.607-.753 3.021-.753 1.399 0 1.81.753 3.042.73 1.259-.022 2.053-1.136 2.822-2.257.896-1.316 1.262-2.59 1.277-2.655-.028-.011-2.447-.94-2.489-3.782ZM16.98 5.86c.653-.794 1.094-1.889.972-2.98-.942.038-2.086.628-2.762 1.412-.606.701-1.14 1.822-.998 2.89 1.054.081 2.134-.531 2.788-1.322Z"
+      />
+    </svg>
     <div className="text-left leading-tight">
       <div className="text-xs text-emerald-200/80">Download on the</div>
       <div className="text-base">App Store</div>
