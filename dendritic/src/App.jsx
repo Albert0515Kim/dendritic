@@ -199,7 +199,6 @@ export default function App() {
             </div>
             <div className="flex items-center gap-3 text-white/70">
               <span className="h-px w-8 bg-white/15" aria-hidden="true" />
-              Built by students, for students.
             </div>
           </div>
         </section>
