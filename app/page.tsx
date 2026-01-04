@@ -99,6 +99,8 @@ const FeatureBlock = ({ feature }: { feature: Feature }) => {
   const isWebset = feature.label === 'Web Sets';
   const isWrite = feature.label === 'Write';
   const isTheme = feature.label === 'Themes';
+  const hasRealImage = isWebset || isWrite || isTheme;
+
   return (
     <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:items-center">
       <div className={alignRight ? 'md:order-2' : ''}>
@@ -107,9 +109,15 @@ const FeatureBlock = ({ feature }: { feature: Feature }) => {
         <p className="mt-4 text-base text-white/70 lg:text-lg">{feature.description}</p>
       </div>
       <div className={alignRight ? 'md:order-1' : ''}>
-        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-4 shadow-[0_20px_60px_-50px_rgba(16,185,129,0.8)]">
-          {isWebset || isWrite || isTheme ? (
-            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-white/10 bg-gradient-to-br from-emerald-500/15 via-emerald-500/5 to-transparent">
+        <div
+          className={
+            hasRealImage
+              ? 'relative overflow-hidden rounded-2xl border border-emerald-300/30 bg-gradient-to-br from-emerald-500/10 via-emerald-500/5 to-transparent p-2 shadow-[0_20px_60px_-50px_rgba(16,185,129,0.8)]'
+              : 'relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.02] p-4 shadow-[0_20px_60px_-50px_rgba(16,185,129,0.8)]'
+          }
+        >
+          {hasRealImage ? (
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-emerald-200/30">
               <Image
                 src={isWebset ? '/webset.png' : isWrite ? '/write.jpeg' : '/theme.jpeg'}
                 alt={`${feature.label} preview`}
@@ -118,7 +126,7 @@ const FeatureBlock = ({ feature }: { feature: Feature }) => {
                 className="h-full w-full object-cover"
                 priority
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/25" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
             </div>
           ) : (
             <>
