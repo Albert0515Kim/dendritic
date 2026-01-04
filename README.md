@@ -1,51 +1,36 @@
-# Dendritic Web
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A simple flashcard application with optional premium membership. Users can create and study sets of flashcards. Premium access is purchased through a Stripe subscription handled by Firebase Cloud Functions.
+## Getting Started
 
-## Quick Start
-
-1. Install dependencies
-   ```bash
-   npm install
-   ```
-2. Copy `.env.example` to `.env` and fill in your keys.
-3. Start the development server
-   ```bash
-   npm start
-   ```
-
-## Environment Variables
-
-The application expects the following variables at build time:
-
-- `REACT_APP_FIREBASE_API_KEY`
-- `REACT_APP_FIREBASE_AUTH_DOMAIN`
-- `REACT_APP_FIREBASE_PROJECT_ID`
-- `REACT_APP_FIREBASE_STORAGE_BUCKET`
-- `REACT_APP_FIREBASE_MESSAGING_SENDER_ID`
-- `REACT_APP_FIREBASE_APP_ID`
-- `REACT_APP_STRIPE_MONTHLY_PRICE_ID`
-- `REACT_APP_STRIPE_YEARLY_PRICE_ID`
-
-Firebase Functions require the Stripe secret and webhook values to be set using `firebase functions:config:set`:
+First, run the development server:
 
 ```bash
-firebase functions:config:set stripe.secret="YOUR_SECRET_KEY" stripe.webhook="YOUR_WEBHOOK_SECRET"
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
 ```
 
-## Firebase Functions
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-The `functions` directory contains two HTTPS functions:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- `createCheckoutSession` – creates a Stripe Checkout session for subscriptions.
-- `stripeWebhook` – handles webhook events to mark a user as a member in Firestore.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-Deploy them with:
+## Learn More
 
-```bash
-firebase deploy --only functions
-```
+To learn more about Next.js, take a look at the following resources:
 
-## Hosting
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-After building the React app, deploy using Firebase Hosting or your preferred service.
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
