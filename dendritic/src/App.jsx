@@ -1,19 +1,8 @@
-﻿'use client';
-
-import Image from 'next/image';
-import Link from 'next/link';
 import { useMemo } from 'react';
 
 const APP_STORE_URL = 'https://apps.apple.com/ag/app/dendritic-learning/id6747594225';
 
-type Feature = {
-  label: string;
-  title: string;
-  description: string;
-  imageAlign?: 'left' | 'right';
-};
-
-const features: Feature[] = [
+const features = [
   {
     label: 'Web Sets',
     title: 'Break away from linear learning',
@@ -29,14 +18,16 @@ const features: Feature[] = [
   {
     label: 'Themes',
     title: 'See patterns across topics',
-    description: 'Surface the threads that connect your courses and projects—spot gaps before they become weak points.',
+    description: 'Surface the threads that connect your courses and projects-spot gaps before they become weak points.',
     imageAlign: 'left',
   },
 ];
 
-const AppStoreBadge = ({ className = '' }: { className?: string }) => (
-  <Link
+const AppStoreBadge = ({ className = '' }) => (
+  <a
     href={APP_STORE_URL}
+    target="_blank"
+    rel="noreferrer"
     className={`group inline-flex items-center gap-3 rounded-xl border border-emerald-300/40 bg-emerald-500/10 px-5 py-3 text-sm font-semibold text-emerald-100 shadow-[0_12px_35px_-22px_rgba(16,185,129,0.9)] transition hover:-translate-y-0.5 hover:border-emerald-300/80 hover:bg-emerald-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-black ${className}`}
     aria-label="Download Dendritic Learning on the App Store"
   >
@@ -52,7 +43,7 @@ const AppStoreBadge = ({ className = '' }: { className?: string }) => (
       <div className="text-xs text-emerald-200/80">Download on the</div>
       <div className="text-base">App Store</div>
     </div>
-  </Link>
+  </a>
 );
 
 const NeuralBackdrop = () => (
@@ -82,19 +73,18 @@ const NeuralBackdrop = () => (
   </svg>
 );
 
-const PlaceholderFrame = ({ label }: { label: string }) => (
-
-    <Image
-      src="/dendritic-web-mockup.png"
-      alt={`${label} mockup`}
-      width={1560}
-      height={1040}
-      className="w-full max-w-full rounded-2xl object-cover shadow-[0_30px_80px_-50px_rgba(16,185,129,0.7)]"
-      priority
-    />
+const PlaceholderFrame = ({ label }) => (
+  <img
+    src="/dendritic-web-mockup.png"
+    alt={`${label} mockup`}
+    width={1560}
+    height={1040}
+    className="w-full max-w-full rounded-2xl object-cover shadow-[0_30px_80px_-50px_rgba(16,185,129,0.7)]"
+    loading="lazy"
+  />
 );
 
-const FeatureBlock = ({ feature }: { feature: Feature }) => {
+const FeatureBlock = ({ feature }) => {
   const alignRight = feature.imageAlign === 'right';
   const isWebset = feature.label === 'Web Sets';
   const isWrite = feature.label === 'Write';
@@ -118,13 +108,13 @@ const FeatureBlock = ({ feature }: { feature: Feature }) => {
         >
           {hasRealImage ? (
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl border border-emerald-200/30">
-              <Image
+              <img
                 src={isWebset ? '/webset.png' : isWrite ? '/write.jpeg' : '/theme.jpeg'}
                 alt={`${feature.label} preview`}
                 width={1200}
                 height={900}
                 className="h-full w-full object-cover"
-                priority
+                loading="lazy"
               />
               <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/20" />
             </div>
@@ -145,7 +135,7 @@ const FeatureBlock = ({ feature }: { feature: Feature }) => {
   );
 };
 
-export default function Page() {
+export default function App() {
   const year = useMemo(() => new Date().getFullYear(), []);
 
   return (
@@ -158,13 +148,13 @@ export default function Page() {
       <div className="relative mx-auto flex max-w-6xl flex-col px-6 pb-20 pt-10 sm:px-8 lg:max-w-6xl lg:px-10">
         <header className="mb-14 flex items-center justify-between rounded-full border border-white/10 bg-white/[0.02] px-4 py-3 backdrop-blur">
           <div className="flex items-center gap-3 text-sm font-semibold text-white">
-            <Image
+            <img
               src="/DendriticLearning_icon_transparent.svg"
               alt="Dendritic Learning logo"
               width={34}
               height={34}
               className="h-8 w-auto"
-              priority
+              loading="lazy"
             />
             <span className="tracking-tight">Dendritic Learning</span>
           </div>
@@ -181,7 +171,7 @@ export default function Page() {
                 Learn in graphs. Think in connections.
               </h1>
               <p className="mt-4 max-w-2xl text-lg text-white/70">
-                Dendritic Learning helps you capture concepts as webs, not lists—so you can see the neural pathways between ideas and remember faster.
+                Dendritic Learning helps you capture concepts as webs, not lists-so you can see the neural pathways between ideas and remember faster.
               </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
@@ -193,7 +183,7 @@ export default function Page() {
                 Built by students, for students.
               </div>
               <div className="h-px flex-1 bg-white/10" />
-              <div className="text-white/50"></div>
+              <div className="text-white/50" />
             </div>
           </div>
           <div className="relative">
@@ -285,13 +275,13 @@ export default function Page() {
         <footer className="mt-16 grid gap-8 rounded-3xl border border-white/10 bg-white/[0.02] px-8 py-10 shadow-[0_20px_80px_-70px_rgba(16,185,129,1)] lg:grid-cols-[1.2fr_0.8fr]">
           <div className="space-y-3">
             <div className="flex items-center gap-3 text-lg font-semibold text-white">
-              <Image
+              <img
                 src="/DendriticLearning_icon_transparent.svg"
                 alt="Dendritic Learning logo"
                 width={36}
                 height={36}
                 className="h-9 w-auto"
-                priority
+                loading="lazy"
               />
               <span className="tracking-tight">Dendritic Learning</span>
             </div>
@@ -299,19 +289,28 @@ export default function Page() {
               Built to help students see the neural patterns in their work and stay ahead with intentional, connected learning.
             </p>
             <div className="flex flex-wrap items-center gap-3 text-sm text-white/70">
-              <Link href={APP_STORE_URL} className="underline decoration-emerald-300/60 decoration-2 underline-offset-4 hover:text-emerald-100">
+              <a
+                href={APP_STORE_URL}
+                target="_blank"
+                rel="noreferrer"
+                className="underline decoration-emerald-300/60 decoration-2 underline-offset-4 hover:text-emerald-100"
+              >
                 App Store
-              </Link>
+              </a>
               <span className="h-1 w-1 rounded-full bg-white/20" aria-hidden="true" />
-              <Link href="#" className="underline decoration-white/30 decoration-2 underline-offset-4 hover:text-emerald-100">
+              <a
+                href="#"
+                className="underline decoration-white/30 decoration-2 underline-offset-4 hover:text-emerald-100"
+              >
                 Privacy Policy
-              </Link>
+              </a>
             </div>
           </div>
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-end sm:gap-6">
-
-            <Link
+            <a
               href="https://www.linkedin.com/company/dendritic-learning/?viewAsMember=true"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-white/15 px-4 py-2 text-sm text-white/80 transition hover:border-emerald-300/60 hover:text-emerald-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-300 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
               aria-label="LinkedIn"
             >
@@ -322,7 +321,7 @@ export default function Page() {
                 />
               </svg>
               LinkedIn
-            </Link>
+            </a>
             <div className="text-sm text-white/50">© {year} Dendritic</div>
           </div>
         </footer>
